@@ -1,0 +1,251 @@
+.menu{
+    background-color: white;
+    box-shadow: 0 0 5px 0 var(--color_quarter);
+    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+    margin-bottom: 20px;
+    user-select: none;
+}
+
+.menu .ico_menu{
+    position: absolute;
+    display: none;
+    right: 20px;
+    height: 30px;
+    top: 10px;
+    line-height: 30px;
+    font-size: 20px;
+    padding: 0 10px;
+}
+.menu .first_menu{
+    display: inline-block
+}
+.menu .first_menu li{
+    display: inline-flex;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.menu .first_menu li a{
+    text-decoration: none;
+    color: var(--color_primary);
+}
+.menu .first_menu .actual a{
+    color: white;
+}
+.menu .first_menu .actual{
+    font-weight: 600;
+    background-color: var(--red);
+    padding: 5px 20px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.filters{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%;
+    margin: 0 auto;
+    min-height: 80px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    padding: 15px 20px;
+}
+.filters > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    font-size: 14px;
+}
+.filters > div > form{
+    max-width: 300px;
+    position: relative;
+}
+.filters > div > form button{
+    position: absolute;
+    content: "";
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    right: 0;
+    top: 0;
+    text-align: center;
+    z-index: 9;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+}
+.filters > div > form input:focus,
+.filters > div > form input:active{
+    border: none;
+    outline: none;
+    outline-offset: 0;
+}
+.filters > div > form input{
+    outline: none;
+    border: none;
+    height: 30px;
+    line-height: 29px;
+    max-width: 350px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.08);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    padding: 0 30px 0 10px;
+    width: 160px;
+}
+.inputSelect{
+    position: relative;
+    list-style-type: none;
+    background-color: #fff;
+    color: #777;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: "Roboto",sans-serif;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.08);
+    display: inline-block;
+    margin: 0px 0px 0px 15px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    max-width: 300px;
+    min-width: 180px;
+    height: 30px;
+}
+.inputSelect.serie{
+    width: 300px;
+}
+.inputSelect .sel_first{
+    padding-right: 30px;
+    position: relative;
+}
+.inputSelect .sel_first .ico{
+    position: absolute;
+    right: 8px;
+    width: 20px;
+    height: 30px;
+    line-height: 31px;
+    text-align: center;
+}
+.inputSelect li{
+    padding: 0 10px;
+    user-select: none;
+    line-height: 30px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.inputSelect li:hover{
+    background-color: rgba(0,0,0,.08);
+}
+.active{
+    display: inline-block !important;
+}
+.nonVisibleTag{
+    overflow: hidden !important;
+}
+.active_serie, .active_year{
+    display: block;
+}
+.inputSelect .containerSelect{
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    margin: 10px auto 0 auto;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.04), inset 0 0 0 1px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    max-height: 350px;
+    overflow-y: auto;
+    z-index: 6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.inputSelect.nonVisibleTag .containerSelect{    
+    display: none !important;
+}
+.cl_fl{
+    font-weight: bold;
+    padding: 0 10px;
+    background-color: var(--red);
+    border: medium none;
+    margin: 0px 20px;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    height: 30px;
+    line-height: 29px;
+    max-width: 140px;
+    text-align: center;
+}
+.cl_fl:hover{
+    box-shadow: 0 0 6px var(--red);
+}
+@media (max-width: 880px){
+    .filters > div{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .filters > div form,
+    .filters > div .inputSelect,
+    .filters > div .cl_fl{
+        margin: 10px 5px 0 5px;
+    }
+}
+@media (max-width: 720px){
+    .filters > div{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .filters > div form,
+    .filters > div form input,
+    .filters > div .inputSelect,
+    .filters > div .cl_fl{
+        width: 100%;
+    }
+}
+@media (max-width: 600px){
+    .menu{
+        flex-direction: column;
+    }
+    .menu .ico_menu{
+        display: block;
+    }
+    .menu .first_menu{
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+        box-shadow: inset 0 1px 0 0 var(--color_second);
+        display: none;
+    }
+    .menu .first_menu li{
+        margin: 0 10px 0 10px;
+    }
+
+}
